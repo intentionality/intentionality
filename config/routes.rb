@@ -3,7 +3,9 @@ Intentionality::Application.routes.draw do
     get 'morning', to: 'todos#morning', on: :collection, as: 'morning'
   end
 
-  root to: 'static#index'
+  #root to: 'static#index'
+
+  root to: 'todos#morning'
 
   match 'edu' => 'static#edu'
   match 'close' => 'static#close'
