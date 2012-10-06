@@ -1,0 +1,16 @@
+ <div class="container">
+    	<div class="span16">
+    		<p>Good morning! Time to get intentional.</p>
+    		<p>What are the three most important things you need to accomplish to make it an effective day.</p>
+    		
+    		<ul class="nav nav-tabs nav-stacked" style="margin-top:20px">
+          <% (1..3).each do |i| %>
+            <li>
+              <%= link_to "Task #{i}<span class='icon-chevron-right pull-right'></span>".html_safe, new_todo_path %>
+            </li>
+          <% end %>
+         </ul>
+    		<a href="experience_two_3.html" class="btn btn-large btn-block" type="button">START MY DAY, INTENTIONALY</a>
+    	</div>
+    </div>
+ 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121006143312) do
+ActiveRecord::Schema.define(:version => 20121006181957) do
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(:version => 20121006143312) do
   create_table "todos", :force => true do |t|
     t.string   "name"
     t.time     "start"
-    t.integer  "duration"
     t.boolean  "complete"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.datetime "end"
   end
 
 end
