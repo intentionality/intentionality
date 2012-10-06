@@ -3,7 +3,7 @@ class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = current_user.todos
+    @todos = current_user.todos.of_today
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,11 +82,7 @@ class TodosController < ApplicationController
     end
   end
 
-  def step1
-  end
-
   def morning
-    current_user.todos
-
+    @todos = current_user.todos
   end
 end
