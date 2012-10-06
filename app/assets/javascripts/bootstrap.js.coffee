@@ -2,6 +2,7 @@ jQuery ->
   $("a[rel=popover]").popover()
   $(".tooltip").tooltip()
   $("a[rel=tooltip]").tooltip()
+  $('select').chosen()
 
   $('form#new_todo').submit ->
     Application.parseTimeField $('form#new_todo input[name=start]')
