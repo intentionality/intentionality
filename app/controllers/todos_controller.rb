@@ -1,8 +1,9 @@
 class TodosController < ApplicationController
+  before_filter :authenticate_user!
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.all
+    @todos = current_user.todos
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class TodosController < ApplicationController
   # GET /todos/1
   # GET /todos/1.json
   def show
-    @todo = Todo.find(params[:id])
+    @todo = current_user.todos.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,7 @@ class TodosController < ApplicationController
   # GET /todos/new
   # GET /todos/new.json
   def new
-    @todo = Todo.new
+    @todo = current_user.todos.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +35,13 @@ class TodosController < ApplicationController
 
   # GET /todos/1/edit
   def edit
-    @todo = Todo.find(params[:id])
+    @todo = current_user.todos.find(params[:id])
   end
 
   # POST /todos
   # POST /todos.json
   def create
-    @todo = Todo.new(params[:todo])
+    @todo = current_user.todos.build(params[:todo])
 
     respond_to do |format|
       if @todo.save
@@ -85,6 +86,7 @@ class TodosController < ApplicationController
   end
 
   def morning
+    current_user.todos
 
   end
 end

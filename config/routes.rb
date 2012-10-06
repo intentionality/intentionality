@@ -1,4 +1,6 @@
 Intentionality::Application.routes.draw do
+  devise_for :users
+
   resources :todos do 
     get 'morning', to: 'todos#morning', on: :collection, as: 'morning'
   end
