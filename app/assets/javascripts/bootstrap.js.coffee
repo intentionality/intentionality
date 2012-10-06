@@ -3,6 +3,9 @@ jQuery ->
   $(".tooltip").tooltip()
   $("a[rel=tooltip]").tooltip()
 
+  $('form#new_todo').submit ->
+    Application.parseTimeField $('form#new_todo input[name=start]')
+    Application.parseTimeField $('form#new_todo input[name=end]')
 
 Application = 
   parseTimeField: (field) ->
@@ -11,5 +14,5 @@ Application =
     date = new Date()
     date.setHours(hours)
     date.setMinutes(minutes)
-    field.val(date.toJSON)
+    field.val(date.toJSON())
 
