@@ -1,5 +1,7 @@
 Intentionality::Application.routes.draw do
-  resources :todos
+  resources :todos do 
+    get 'morning', to: 'todos#morning', on: :collection, as: 'morning'
+  end
 
   root to: 'static#index'
 
