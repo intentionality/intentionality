@@ -6,6 +6,6 @@ class Todo < ActiveRecord::Base
   scope :needs_notification, where(:been_notified => false)
 
   def send_notification
-    TodoMailer.todo_notification(self).deliver!
+    NotificationMailer.todo_notification(self).deliver!
   end
 end
