@@ -8,6 +8,6 @@ class NotificationMailer < ActionMailer::Base
   #
   def todo_notification(todo)
     @todo = todo
-    mail to: todo.user.email_address
+    mail to: todo.user.email
   end
 end
