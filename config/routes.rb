@@ -1,9 +1,10 @@
 Intentionality::Application.routes.draw do
-  resources :todos do
-    get '/step1', to: 'todos#step1'
-  end
+  resources :todos
 
   root to: 'static#index'
+
+  match 'edu' => 'static#edu'
+  match 'close' => 'static#close'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
