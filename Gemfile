@@ -6,7 +6,7 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'oauth-facebook'
+gem 'omniauth-facebook'
 
 
 # Gems used only for assets and not required
@@ -19,7 +19,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'twiiter-bootstrap'
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
