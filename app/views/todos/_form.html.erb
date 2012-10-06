@@ -1,25 +1,26 @@
 <%= form_for @todo, :html => { :class => 'form-horizontal', id: 'new_todo' } do |f| %>
   <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
+    <%= f.label :name %>
+    <div>
+      <%= f.text_field :name, :class => 'timer text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :start, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.time_select :start, class: "chosen", style: "width: 75px;" %>
+
+    <%= f.label :start %>
+    <div>
+      <%= f.time_select :start, class: "chosen" %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :end, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.time_select :end, class: "chosen", style: "width: 75px;" %>
+    <%= f.label :end %>
+    <div>
+      <%= f.time_select :end, class: "chosen" %>
     </div>
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit nil, :class => 'btn' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
              morning_todos_path , :class => 'btn' %>
   </div>

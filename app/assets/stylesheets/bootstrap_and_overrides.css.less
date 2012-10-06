@@ -31,13 +31,31 @@ body {
 // Example:
 // @linkColor: #ff0000;
 
+html {
+	max-width:320px;
+}
+
 body {
-	
-}	
+	font-family: 'Numans', sans-serif;
+	font-size:13px;	
+	letter-spacing:1px;
+}
+
+h1 {
+	font-size:20px;
+}
 
 
 #sun_image {
-	
+	margin: 0 auto 20px;
+	width: 165px;	
+}
+#sun_image img {
+	width: 50px;	
+}
+
+.form-horizontal .form-actions {
+	padding:10px;
 }
 
 .navbar-inner {
@@ -49,7 +67,15 @@ body {
 	text-align:center;
 	float:none;
 	text-shadow: none;
+	padding:12px 20px 5px;
 }	
+.navbar .btn-navbar {
+	margin:5px;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+	padding:0;
+}
 
 .icon-chevron-right {
 	margin-top: 5px;
@@ -92,4 +118,9 @@ body {
 
 ul li a {
 	color:#555;
+}
+
+img.img-circle {
+	height: 280px;
+	max-width: 280px;
 }
