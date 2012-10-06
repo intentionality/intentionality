@@ -4,9 +4,13 @@
     		<p>What are the three most important things you need to accomplish to make it an effective day.</p>
     		
     		<ul class="nav nav-tabs nav-stacked" style="margin-top:20px">
-          <% 1.upto(3) do |i| %>
+          <% @todos.each do |t| %>
+            <%= link_to "#{t.name} <span class='icon-chevron-right pull-right'></span>".html_safe, todo_path(t) %>
+            </li>
+          <% end %>
+          <% (3 - @todos.size).times do |i| %>
             <li>
-              <%= link_to "Task #{i}<span class='icon-chevron-right pull-right'></span>".html_safe, new_todo_path %>
+              <%= link_to "Task #{i + 1}<span class='icon-chevron-right pull-right'></span>".html_safe, new_todo_path %>
             </li>
           <% end %>
          </ul>
