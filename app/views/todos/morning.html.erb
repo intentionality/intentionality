@@ -8,11 +8,11 @@
             <% if @todos.nil? or @todos[i-1].nil? %>
 
             <li>
-              <%= link_to "Task #{i + 1}<span class='icon-chevron-right pull-right'></span>".html_safe, new_todo_path %>
+              <%= link_to "Task #{i}<span class='icon-chevron-right pull-right'></span>".html_safe, new_todo_path %>
             </li>
             <% else %>
             <li>
-              <%= @todos[i].name %>
+              <%= link_to @todos[i-1].name, "#" %>
             </li>
             <% end%>
           <% end %>
