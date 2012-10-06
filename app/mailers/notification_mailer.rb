@@ -1,5 +1,5 @@
 class NotificationMailer < ActionMailer::Base
-  default from: "from@intentionality.herokuapp.com"
+  default from: "support@liberat.us"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
