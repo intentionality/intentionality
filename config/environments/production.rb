@@ -51,6 +51,14 @@ Intentionality::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.delivery_method = :mailchimp_mandrill
+  config.action_mailer.mailchimp_mandrill_settings = {
+        :api_key => ENV['MANDRILL_APIKEY'],
+        :track_clicks => true,
+        :track_opens  => true, 
+        :from_name    => ""
+   }
+
   # Enable threaded mode
   # config.threadsafe!
 
