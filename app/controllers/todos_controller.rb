@@ -83,4 +83,8 @@ class TodosController < ApplicationController
 
   def step1
   end
+
+  def morning
+
+  end
 end
