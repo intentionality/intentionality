@@ -80,4 +80,7 @@ class TodosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def step1
+  end
 end

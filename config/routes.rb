@@ -1,5 +1,7 @@
 Intentionality::Application.routes.draw do
-  resources :todos
+  resources :todos do
+    get '/step1', to: 'todos#step1'
+  end
 
   root to: 'static#index'
 
